@@ -1,6 +1,7 @@
 from pico2d import * 
 import gfw
 from girl import Girl
+import sub_scene
 
 import os
 os.chdir('C:\\Users\\USER\\Documents\\GitHub\\parksumin2022180015\\res')
@@ -27,7 +28,7 @@ def resume():
 
 def handle_event(e):
     if e.type == SDL_KEYDOWN and e.key == SDLK_RETURN:
-        # gfw.push(sub_scene)
+        gfw.push(sub_scene)
         return True # 이 이벤트는 처리했음을 알린다
     if e.type == SDL_KEYDOWN and e.key == SDLK_1:
         print(world.objects)
